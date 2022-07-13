@@ -1,0 +1,2 @@
+export const GET_DATA_ASYNC = 'GET_DATA_ASYNC';
+export const GET_DATA_SUCCESS = 'GET_DATA_SUCCESS';
