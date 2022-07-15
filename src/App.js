@@ -1,18 +1,19 @@
 import './App.css';
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {getDataAsync} from "./store/actions";
+import {Header} from "./component/header/Header";
+import {Footer} from "./component/footer/footer";
+import {DataPage} from "./page/DataPage";
+import {useState} from "react";
 
 function App() {
-  const data = useSelector(state => state.data);
-  console.log('data ->', data);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getDataAsync());
-  }, []);
+    const [view, setView] = useState(true);
+    const changeView = () => {
+      setView(!view);
+    };
   return (
-    <div>
-      elecard-app
+    <div className="app">
+        <Header changeView={changeView}/>
+        {view ? <DataPage /> : null}
+        <Footer/>
     </div>
   );
 }

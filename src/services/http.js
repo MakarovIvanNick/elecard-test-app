@@ -9,6 +9,6 @@ export const get = async () => {
         const response = await req.get('');
         return response.data;
     } catch (e) {
-        console.log('get error ->', e);
+        throw new Error('Network Error...');
     }
 }

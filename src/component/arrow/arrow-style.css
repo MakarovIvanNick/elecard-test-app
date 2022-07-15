@@ -1,0 +1,11 @@
+.right {
+    transform: rotate(180deg);
+}
+.arrow {
+    transition: 0.25s;
+    cursor: pointer;
+}
+.arrow:hover {
+    transform: scale(1.5);
+    transition: 0.25s;
+}
